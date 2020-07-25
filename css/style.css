@@ -6,8 +6,13 @@
     box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+  height: 100vh;
+}
 
 body {
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: #234b69;
@@ -35,12 +40,6 @@ h1 {
 
 .drag {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  
   width: 100px;
   height: 100px;
   background-color: purple;

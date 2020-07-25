@@ -1,6 +1,7 @@
 /* eslint-disable no-use-before-define */
 const wrapper = document.querySelector('.wrapper');
 const drag = document.querySelector('.drag');
+const start = document.querySelector('.start');
 
 let play = false;
 let sayNoo = null;
@@ -9,6 +10,12 @@ let offsetTouchY = null;
 const sayOxx = new Audio('../audio/play.mp3');
 const sayShlep = new Audio('../audio/stop.mp3');
 
+// ------------------------ listeners
+start.addEventListener('touchstart', () => {
+    start.style.opacity = 0;
+    start.style.zIndex = -1;
+    drag.style.opacity = 1;
+});
 
 drag.addEventListener('touchstart', touchStart);
 drag.addEventListener('touchmove', touchMove);
@@ -18,10 +25,9 @@ drag.addEventListener('touchend', touchEnd);
 function touchStart(event) {
     event.preventDefault();
 
-    sayNoo = new Audio(`../audio/${randomNumber(1, 9)}.mp3`);
-
     if (!play) {
         play = true;
+        sayNoo = new Audio(`../audio/${randomNumber(1, 9)}.mp3`);
         sayOxx.play();
     }
 
@@ -64,7 +70,6 @@ function touchMove(event) {
         sayNoo.play();
         drag.style.backgroundPosition = `-202px -3px`;
     }
-
 }
 
 function touchEnd() {

@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let sayNoo = null;
     let offsetTouchX = null;
     let offsetTouchY = null;
-    const sayOxx = new Audio('../audio/play.mp3');
-    const sayShlep = new Audio('../audio/stop.mp3');
+    const sayOxx = new Audio('./play.mp3');
+    const sayShlep = new Audio('./stop.mp3');
 
     // ------------------------ listeners
     start.addEventListener('touchstart', () => {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!play) {
             play = true;
-            sayNoo = new Audio(`../audio/${randomNumber(1, 9)}.mp3`);
+            sayNoo = new Audio(`./${randomNumber(1, 9)}.mp3`);
             sayOxx.play();
         }
 

@@ -1,8 +1,10 @@
-/* eslint-disable no-use-before-define */
 document.addEventListener("DOMContentLoaded", () => {
     const wrapper = document.querySelector('.wrapper');
     const drag = document.querySelector('.drag');
     const start = document.querySelector('.start');
+
+    drag.style.top = '45%';
+    drag.style.left = '45%';
 
     let offsetTouchX = null;
     let offsetTouchY = null;
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sayStart = new Audio('./play.mp3');
     const sayStop = new Audio('./stop.mp3');
     let sayNo = new Audio(`./1.mp3`);
-    sayNo.volume = 0.4;
+    sayNo.volume = 0.1;
 
     // ------------------------ listeners
     start.addEventListener('touchstart', () => {

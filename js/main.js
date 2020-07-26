@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const drag = document.querySelector('.drag');
     const start = document.querySelector('.start');
 
-    drag.style.top = '45%';
-    drag.style.left = '45%';
+    drag.style.top = '10vh';
+    drag.style.left = '10vw';
 
     let offsetTouchX = null;
     let offsetTouchY = null;
